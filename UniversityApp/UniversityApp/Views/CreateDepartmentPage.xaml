@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniversityApp.Views.CreateDepartmentPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    
+    <ContentPage.Content>
+        <ScrollView BindingContext="{Binding CreateDepartment}">
+            <StackLayout Padding="15">
+
+                <Label Text="New Department"
+                       FontSize="Title"
+                       HorizontalOptions="Center"
+                       TextColor="Red"></Label>
+
+                <Grid Margin="10, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                   
+
+                    <Label Text="Name" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"></Label>
+                    <Entry Grid.Row="1" 
+                       Grid.Column="1"
+                       Text="{Binding Name}"></Entry>
+
+                    <Label Text="Budget" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"></Label>
+                    <Entry Keyboard="Numeric" 
+                       Grid.Row="2" 
+                       Grid.Column="1"
+                       Text="{Binding Budget}"></Entry>
+
+                    <Label Text="StartDate" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"></Label>
+                    <DatePicker Date="{Binding StartDate}" Grid.Row="3" Grid.Column="1" Format="yyyy-MM-dd"></DatePicker>
+
+                    <Label Text="InstructorID" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"></Label>
+                    <Entry Keyboard="Numeric" 
+                       Grid.Row="4" 
+                       Grid.Column="1"
+                       Text="{Binding InstructorID}"></Entry>
+
+                </Grid>
+
+                <Button Text="Save"
+                        CornerRadius="23"
+                        HeightRequest="46"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Command="{Binding SaveCommand}"
+                        IsEnabled="{Binding IsEnabled}"></Button>
+
+                <ActivityIndicator IsRunning="{Binding IsRunning}"></ActivityIndicator>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
