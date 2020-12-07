@@ -37,8 +37,8 @@ namespace UniversityApp.Helpers
         public static string GET_Instructors = "/api/Instructors/GetInstructors";
         public static string GET_Instructor = "/api/Instructors/GetInstructors";
         public static string GET_Instructor_BY_COURSE = "/api/Instructors/GetInstructorsByCourseId";
-        public static string PUT_Instructor = "/api/Instructors";
-        public static string DELETE_Instructor = "/api/Instructors";
+        public static string PUT_Instructor = "/api/Instructors/";
+        public static string DELETE_Instructor = "/api/Instructors/";
         public static string POST_Instructor = "/api/Instructors";
         #endregion
 
@@ -55,8 +55,8 @@ namespace UniversityApp.Helpers
         public static string GET_Student = "/api/Students/GetStudent";
         public static string GET_Students_BY_COURSES = "/api/Students/GetStudentsByCourseId";
         public static string POST_Students = "/api/Students";
-        public static string PUT_Students = "/api/Students";
-        public static string DELETE_Students = "/api/Students";
+        public static string PUT_Students = "/api/Students/";
+        public static string DELETE_Students = "/api/Students/";
         #endregion
     }
 }

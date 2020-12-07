@@ -44,7 +44,7 @@ namespace UniversityApp.ViewModels
                 return;
             }
 
-            await instructorService.Delete(Endpoints.DELETE_COURSES, this.ID);
+            await instructorService.Delete(Endpoints.DELETE_Instructor, this.ID);
 
             await Application.Current.MainPage.DisplayAlert("Message", "The process is successful", "Cancel");
             var instructorViewModel = InstructorsViewModel.GetInstance();

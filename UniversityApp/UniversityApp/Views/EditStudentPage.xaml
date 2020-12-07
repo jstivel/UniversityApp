@@ -35,7 +35,7 @@
                        Text="{Binding Student.FirstMidName}"></Entry>
 
                     <Label Text="EnrollmentDate" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"></Label>
-                    <DatePicker Date="{Binding Instructor.EnrollmentDate}" Grid.Row="3" Grid.Column="1" Format="yyyy-MM-dd"></DatePicker>
+                    <DatePicker Date="{Binding Student.EnrollmentDate}" Grid.Row="3" Grid.Column="1" Format="yyyy-MM-dd"></DatePicker>
 
                 </Grid>
 
